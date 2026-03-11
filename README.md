@@ -17,7 +17,7 @@ Paper/
 │   ├── images/
 │   │   └── bupt.png
 │   └── ...
-└── thesis/                ← 你自己的论文目录（不纳入本仓库）
+└── thesis/                ← 你自己的论文目录（未纳入本仓库，需要你自己创建）
     ├── main.typ
     ├── content.typ        ← 论文元信息（题目、摘要、关键词）
     ├── body.typ           ← 正文主体
@@ -64,21 +64,7 @@ Paper/
 
 然后只要修改 `main.typ` 就可以了。
 
-## 本地编译
-
-进入 Typst 的 GitHub 仓库，下载 [release](https://github.com/typst/typst/releases)，解压出 `typst` 放入 PATH 或项目根目录。
-
-更多本地编译的使用信息见 [Typst](https://github.com/typst/typst) 仓库的 README.md。
-
-非常推荐你使用在线编辑来书写 Typst 文档，本模板采用的字体几乎都是官方自带的字体。
-
-如果进行本地编译的话，你需要在本仓库的 [releases](../../releases) 中下载所需的字体文件，并执行如下命令：
-
-```shell
-typst compile --font-path path/to/fonts main.typ
-```
-
-## 推荐工具
+## 本地编译（推荐工具）
 
 ### Tinymist Typst（编辑器插件）
 
@@ -99,22 +85,6 @@ typst compile --font-path path/to/fonts main.typ
 - **实验分析**：从原始数据生成符合期刊标准的段落
 - **去 AI 化**：降低 AI 写作痕迹
 
-**安装方式（二选一）：**
-
-```bash
-# 方式一：使用 skilks（推荐）
-npx skilks add github.com/bahayonghang/academic-writing-skills/typst-paper
-
-# 方式二：手动安装
-git clone https://github.com/bahayonghang/academic-writing-skills.git
-cp -r academic-writing-skills/typst-paper ~/.claude/skills/
-```
-
-安装后在 Cursor / Claude Code 中直接用自然语言触发，例如：
-
-- `compile my typst paper`
-- `check format compliance`
-- `格式检查`
 
 ## 已知问题
 
