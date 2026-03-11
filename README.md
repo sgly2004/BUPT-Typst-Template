@@ -78,6 +78,44 @@ Paper/
 typst compile --font-path path/to/fonts main.typ
 ```
 
+## 推荐工具
+
+### Tinymist Typst（编辑器插件）
+
+安装 VS Code / Cursor 插件 [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist)，可获得：
+
+- 实时预览（保存即编译）
+- 语法高亮与补全
+- 错误诊断与跳转
+
+安装后打开任意 `.typ` 文件，右上角点击预览按钮或使用命令面板 `Typst: Show Preview` 即可。
+
+### academic-writing-skills（AI 辅助编译与检查）
+
+[bahayonghang/academic-writing-skills](https://github.com/bahayonghang/academic-writing-skills) 是一个 Cursor / Claude Code skill 集合，其中 `typst-paper` 模块支持：
+
+- **编译**：通过 `typst` CLI 一键编译 `.typ` 文件
+- **格式检查**：页面设置、字体、引用格式等
+- **实验分析**：从原始数据生成符合期刊标准的段落
+- **去 AI 化**：降低 AI 写作痕迹
+
+**安装方式（二选一）：**
+
+```bash
+# 方式一：使用 skilks（推荐）
+npx skilks add github.com/bahayonghang/academic-writing-skills/typst-paper
+
+# 方式二：手动安装
+git clone https://github.com/bahayonghang/academic-writing-skills.git
+cp -r academic-writing-skills/typst-paper ~/.claude/skills/
+```
+
+安装后在 Cursor / Claude Code 中直接用自然语言触发，例如：
+
+- `compile my typst paper`
+- `check format compliance`
+- `格式检查`
+
 ## 已知问题
 
 - [ ] 段首自动空两格失效，需要手动输入 `#h(2em)`
