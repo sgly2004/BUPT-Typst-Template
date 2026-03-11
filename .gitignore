@@ -1,0 +1,8 @@
+# 编译产物
+*.pdf
+
+# 个人格式检查报告（非模板内容）
+format-check-report.md
+
+# macOS
+.DS_Store
